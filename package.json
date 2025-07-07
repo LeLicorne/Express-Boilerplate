@@ -8,7 +8,7 @@
     "dev": "nodemon",
     "build": "tsc",
     "build:watch": "tsc --watch",
-    "start:dev": "npx ts-node src/app.ts",
+    "start:dev": "npx ts-node -r tsconfig-paths/register src/app.ts",
     "prepare": "husky install",
     "format": "prettier --ignore-path .prettierignore --ignore-path .gitignore --check \"src/**/*.+(js|json|ts|tsx)\"",
     "format:fix": "prettier --ignore-path .prettierignore --ignore-path .gitignore --write \"src/**/*.+(js|json|ts|tsx)\"",
@@ -40,6 +40,7 @@
     "prettier": "3.6.2",
     "supertest": "7.1.1",
     "ts-node": "10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "5.3.3"
   },
   "lint-staged": {

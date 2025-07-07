@@ -1,5 +1,6 @@
 import { debug } from 'console';
 import { Request, Response } from 'express';
+import authRoutes from '@/routes/auth';
 
 const express = require('express');
 const cors = require('cors');
@@ -25,6 +26,8 @@ app.get('/', (_: Request, res: Response) => {
     version: '1.0.0',
   });
 });
+
+app.use('/api/auth', authRoutes);
 
 // TODO: Importer et utiliser les routes du dossier routes/
 // TODO: Importer et utiliser les middlewares du dossier middleware/
